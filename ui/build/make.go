@@ -102,6 +102,7 @@ func runMakeProductConfig(ctx Context, config Config) {
 	bannerVars := []string{
 		"PLATFORM_VERSION_CODENAME",
 		"PLATFORM_VERSION",
+		"TD_VERSION",
 		"TARGET_PRODUCT",
 		"TARGET_BUILD_VARIANT",
 		"TARGET_BUILD_TYPE",
