@@ -6,6 +6,7 @@ build = [
 
 subdirs = [
     "build/soong",
+    "vendor/tripndroid/build/soong",
 ]
 
 optional_subdirs = [

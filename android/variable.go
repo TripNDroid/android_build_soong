@@ -19,6 +19,7 @@ import (
 	"reflect"
 	"runtime"
 	"strings"
+	"tripndroid/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -94,6 +95,9 @@ type variableProperties struct {
 		Pdk struct {
 			Enabled *bool
 		}
+
+		// include TripNDroid variables
+		Tripndroid android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -169,6 +173,9 @@ type productVariables struct {
 	DeviceKernelHeaders []string `json:",omitempty"`
 
 	BoardUsesQTIHardware *bool `json:",omitempty"`
+
+	// include TripNDroid variables
+	Tripndroid android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
